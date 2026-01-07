@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Calculator UI</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Calculator</h1>
+    <div class="row">
+      <input id="a" type="number" step="any" placeholder="First number" />
+      <select id="op">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">×</option>
+        <option value="div">÷</option>
+      </select>
+      <input id="b" type="number" step="any" placeholder="Second number" />
+      <button id="go">Compute</button>
+    </div>
+    <div id="result"></div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

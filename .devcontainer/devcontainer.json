@@ -1,0 +1,16 @@
+{
+  "name": "Java Calculator",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [8080],
+  "postCreateCommand": "bash -lc 'chmod +x /workspace/run.sh && javac -d out src/*.java || true'",
+  "postStartCommand": "bash -lc 'nohup java -cp out CalculatorServer > /workspace/server.log 2>&1 &'",
+  "portsAttributes": {
+    "8080": {
+      "label": "Calculator UI",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
